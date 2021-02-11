@@ -16,7 +16,11 @@ Imports:
     attempt,
     DT,
     glue,
-    htmltools
+    htmltools,
+    thinkr,
+    data.table,
+    plotly,
+    irs.soi
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
