@@ -19,11 +19,15 @@ usethis::use_package( "thinkr" )
 usethis::use_package("data.table")
 usethis::use_package("plotly")
 usethis::use_package("irs.soi")
+usethis::use_package("shinydashboard")
+usethis::use_package("shinyWidgets")
 
 ## Add modules ----
 ## Create a module infrastructure in R/
 golem::add_module( name = "page_1" ) # Name of the module
-golem::add_module( name = "name_of_module2" ) # Name of the module
+golem::add_module( name = "page_2" )# Name of the module
+golem::add_module( name = "taxRate" ) # Name of the module
+golem::add_module( name = "select_view" )
 
 ## Add helper functions ----
 ## Creates ftc_* and utils_*
