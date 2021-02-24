@@ -16,12 +16,13 @@ test_that("app server", {
 test_that(
   "app launches",{
     skip_on_cran()
+    skip_if_not(interactive())
     skip_on_travis()
     skip_on_appveyor()
     x <- processx::process$new(
-      "R", 
+      "R",
       c(
-        "-e", 
+        "-e",
         "pkgload::load_all(here::here());run_app()"
       )
     )

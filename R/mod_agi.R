@@ -1,30 +1,35 @@
-#' agi UI Function
+#' Function to plot AGI in aggregate or per cap
 #'
 #' @description A shiny Module.
 #'
-#' @param id,input,output,session Internal parameters for {shiny}.
+#' @param id character used to specify namespace, see \code{shiny::\link[shiny]{NS}}
 #'
-#' @noRd
+#' @return a \code{shiny::\link[shiny]{tagList}} containing UI elements
+#' @export
 #'
 #' @importFrom shiny NS tagList
 mod_agi_ui <- function(id){
   ns <- NS(id)
+
   tagList(
-    plotly::plotlyOutput(ns("agi_level")))
+    plotly::plotlyOutput(ns("agi_level"))
+    )
+
 }
 
-#' agi Server Function
+#' Function to plot AGI in aggregate or per cap
 #'
-#' @param dataset
+#' @param input,output,session standard \code{shiny} boilerplate.
+#' @param dataset data frame (non-reactive) with variables necessary
+#' @param var reactive list of with variable type
 #'
-#' @noRd
-mod_agi_server <- function(input, output, session, dataset){
+#' @export
+mod_agi_server <- function(input, output, session, dataset, var){
   ns <- session$ns
 
   output$agi_level <- plotly::renderPlotly({
-
-    irs.soi::make_agi_graph(dataset())
-
+    req(dataset())
+    irs.soi::make_agi_graph(dataset(), type = var$type())
   })
 
 }

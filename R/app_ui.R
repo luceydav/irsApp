@@ -10,6 +10,7 @@
 #'
 #' @noRd
 app_ui <- function(request) {
+
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
@@ -20,8 +21,9 @@ app_ui <- function(request) {
 
       shinydashboard::dashboardSidebar(
         shinydashboard::sidebarMenu(
-          shinydashboard::menuItem("Table", tabName = "table", icon = shiny::icon("table")),
+          shinydashboard::menuItem("Tables", tabName = "table", icon = shiny::icon("table")),
           shinydashboard::menuItem("Charts", tabName = "charts", icon = shiny::icon("bar-chart-o")),
+          shinydashboard::menuItem("View", mod_varselect_ui("varselect_ui_1"), icon = shiny::icon("gear")),
           shinyWidgets::selectizeGroupUI(
             id = "my-filters",
             inline = FALSE,
@@ -60,14 +62,23 @@ app_ui <- function(request) {
         shinydashboard::tabItems(
           # First tab content
           shinydashboard::tabItem(tabName = "table",
-            shinydashboard::box(mod_summary_ui("summary_ui_1"), width = 12)),
+            shinydashboard::tabBox(
+              title = "Selected Tables",
+              width = 12,
+              shiny::tabPanel("Summary", mod_summary_ui("summary_ui_1")),
+              shiny::tabPanel("Income", mod_income_ui("income_ui_1")),
+              shiny::tabPanel("Deductions", mod_deductions_ui("deductions_ui_1")))),
           shinydashboard::tabItem(tabName = "charts",
             shinydashboard::tabBox(
               title = "Selected Charts",
               width = 12,
               shiny::tabPanel("AGI", mod_agi_ui("agi_ui_1")),
-              shiny::tabPanel("Tax Rate", mod_taxRate_ui("taxRate_ui_1")))))
-        )))
+              shiny::tabPanel("Tax Rate", mod_taxRate_ui("taxRate_ui_1")),
+              shiny::tabPanel("Compare",mod_spaghetti_ui("spaghetti_ui_1"))
+        ))
+      ))
+  )
+)
 }
 
 #' Add external Resources to the Application
@@ -78,7 +89,9 @@ app_ui <- function(request) {
 #' @import shiny
 #' @import shinydashboard
 #' @import shinyWidgets
+#'
 #' @importFrom golem add_resource_path activate_js favicon bundle_resources
+#'
 #' @noRd
 golem_add_external_resources <- function(){
 
@@ -87,7 +100,7 @@ golem_add_external_resources <- function(){
   )
 
   tags$head(
-    favicon(),
+    golem::favicon(),
     bundle_resources(
       path = app_sys('app/www'),
       app_title = 'irs.soi.shiny.golem'

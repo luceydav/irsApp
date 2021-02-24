@@ -1,12 +1,8 @@
 Package: irs.soi.shiny.golem
-Title: An Amazing Shiny App
+Title: IRS Tax Dashboard
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "firstname",
-           family = "lastname",
-           role = c("aut", "cre"),
-           email = "your@email.com")
-Description: What the package does (one paragraph).
+Authors@R: person('David', 'Lucey', email = 'dnl2001@stern.nyu.edu', role = c('cre', 'aut'))
+Description: An App which allows exploration of 15 years of IRS zip level tax data.
 License: MIT + file LICENSE
 Imports: 
     config,
@@ -22,7 +18,10 @@ Imports:
     plotly,
     irs.soi,
     shinydashboard,
-    shinyWidgets
+    shinyWidgets,
+    magrittr,
+    fst,
+    rlang
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1

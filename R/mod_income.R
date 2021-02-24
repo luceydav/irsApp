@@ -1,4 +1,4 @@
-#' page_1 UI Function
+#' income UI Function
 #'
 #' @description A shiny Module.
 #'
@@ -7,31 +7,30 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_summary_ui <- function(id){
+mod_income_ui <- function(id){
   ns <- NS(id)
   tagList(
-    DT::DTOutput(outputId = ns("table"))
+    DT::DTOutput(outputId = ns("income"))
   )
 }
 
-#' page_1 Server Function
+#' income Server Function
 #'
 #' @param input,output,session standard \code{shiny} boilerplate.
 #' @param dataset data frame (non-reactive) with variables necessary
 #' @param var reactive list of with variable type
 #'
 #' @noRd
-mod_summary_server <- function(input, output, session, dataset, var){
+mod_income_server <- function(input, output, session, dataset, var){
 
   ns <- session$ns
 
-  output$table <- DT::renderDT({
+  output$income <- DT::renderDT({
 
     req(dataset())
 
-    irs.soi::make_summary_DT(dataset(), type = var$type())
+    irs.soi::make_income_DT(dataset(), type = var$type())
 
   })
 }
-
 

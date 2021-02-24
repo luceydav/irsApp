@@ -21,13 +21,19 @@ usethis::use_package("plotly")
 usethis::use_package("irs.soi")
 usethis::use_package("shinydashboard")
 usethis::use_package("shinyWidgets")
+usethis::use_package("fst")
+usethis::use_package("rlang")
+
+usethis::use_r("setup")
 
 ## Add modules ----
 ## Create a module infrastructure in R/
 golem::add_module( name = "page_1" ) # Name of the module
 golem::add_module( name = "page_2" )# Name of the module
 golem::add_module( name = "taxRate" ) # Name of the module
-golem::add_module( name = "select_view" )
+golem::add_module( name = "spaghetti" )
+golem::add_module( name = "income" )
+golem::add_module( name = "varselect" )
 
 ## Add helper functions ----
 ## Creates ftc_* and utils_*

@@ -23,16 +23,10 @@ mod_taxRate_server <- function(input, output, session, dataset){
   ns <- session$ns
 
   output$taxrate <- plotly::renderPlotly({
-
+    req(dataset())
     irs.soi::make_tax_graph(dataset())
 
   })
 
 }
-
-## To be copied in the UI
-# mod_taxRate_ui("taxRate_ui_1")
-
-## To be copied in the server
-# callModule(mod_taxRate_server, "taxRate_ui_1")
 

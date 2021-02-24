@@ -16,7 +16,7 @@
 golem::fill_desc(
   pkg_name = "irs.soi.shiny.golem", # The Name of the package containing the App
   pkg_title = "IRS Tax Dashboard", # The Title of the package containing the App
-  pkg_description = "An App which allows exploration of zip level tax data over 15 years",
+  pkg_description = "An App which allows exploration of 15 years of IRS zip level tax data.",
   # The Description of the package containing the App
   author_first_name = "David", # Your First Name
   author_last_name = "Lucey", # Your Last Name
