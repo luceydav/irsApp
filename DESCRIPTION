@@ -31,3 +31,5 @@ Suggests:
     rmarkdown
 Config/testthat/edition: 3
 VignetteBuilder: knitr
+URL: https://github.com/luceydav/irsApp
+BugReports: https://github.com/luceydav/irsApp/issues
