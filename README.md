@@ -1,23 +1,20 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# irs.soi.shiny.golem
+# irsApp
 
 <!-- badges: start -->
-
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-The goal of irs.soi.shiny.golem is to …
+The goal of irsApp is to …
 
 ## Installation
 
-You can install the released version of irs.soi.shiny.golem from
+You can install the released version of irsApp from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("irs.soi.shiny.golem")
+install.packages("irsApp")
 ```
 
 ## Example
@@ -25,7 +22,7 @@ install.packages("irs.soi.shiny.golem")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-#library(irs.soi.shiny.golem)
+library(irsApp)
 ## basic example code
 ```
 

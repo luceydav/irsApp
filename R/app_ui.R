@@ -103,7 +103,7 @@ golem_add_external_resources <- function(){
     golem::favicon(),
     bundle_resources(
       path = app_sys('app/www'),
-      app_title = 'irs.soi.shiny.golem'
+      app_title = 'irsApp'
     )
     # Add here other external resources
     # for example, you can add shinyalert::useShinyalert()

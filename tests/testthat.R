@@ -1,4 +1,4 @@
 library(testthat)
-library(irs.soi.shiny.golem)
+library(irsApp)
 
-test_check("irs.soi.shiny.golem")
+test_check("irsApp")

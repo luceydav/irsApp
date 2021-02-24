@@ -14,7 +14,7 @@
 ## Fill the DESCRIPTION ----
 ## Add meta data about your application
 golem::fill_desc(
-  pkg_name = "irs.soi.shiny.golem", # The Name of the package containing the App
+  pkg_name = "irsApp", # The Name of the package containing the App
   pkg_title = "IRS Tax Dashboard", # The Title of the package containing the App
   pkg_description = "An App which allows exploration of 15 years of IRS zip level tax data.",
   # The Description of the package containing the App

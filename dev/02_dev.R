@@ -57,7 +57,7 @@ usethis::use_test( "app" )
 # Documentation
 
 ## Vignette ----
-usethis::use_vignette("irs.soi.shiny.golem")
+usethis::use_vignette("irsApp")
 devtools::build_vignettes()
 
 ## Code coverage ----

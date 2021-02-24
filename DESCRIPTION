@@ -1,4 +1,4 @@
-Package: irs.soi.shiny.golem
+Package: irsApp
 Title: IRS Tax Dashboard
 Version: 0.0.0.9000
 Authors@R: person('David', 'Lucey', email = 'dnl2001@stern.nyu.edu', role = c('cre', 'aut'))
@@ -26,5 +26,8 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
 Config/testthat/edition: 3
+VignetteBuilder: knitr
