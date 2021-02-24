@@ -18,7 +18,7 @@
 usethis::use_package( "thinkr" )
 usethis::use_package("data.table")
 usethis::use_package("plotly")
-usethis::use_package("irs.soi")
+usethis::use_package("irsSOI")
 usethis::use_package("shinydashboard")
 usethis::use_package("shinyWidgets")
 usethis::use_package("fst")

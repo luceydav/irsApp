@@ -16,12 +16,12 @@ Imports:
     thinkr,
     data.table,
     plotly,
-    irs.soi,
     shinydashboard,
     shinyWidgets,
     magrittr,
     fst,
-    rlang
+    rlang,
+    irsSOI
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
