@@ -30,7 +30,7 @@ mod_deductions_server <- function(input, output, session, dataset, var){
   ns <- session$ns
 
   output$deductions <- DT::renderDT(
-    irs.soi::make_deductions_DT(dataset(), type = var$type())
+    irsSOI::make_deductions_DT(dataset(), type = var$type())
 
   )
 }

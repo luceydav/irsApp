@@ -29,7 +29,7 @@ mod_agi_server <- function(input, output, session, dataset, var){
 
   output$agi_level <- plotly::renderPlotly({
     req(dataset())
-    irs.soi::make_agi_graph(dataset(), type = var$type())
+    irsSOI::make_agi_graph(dataset(), type = var$type())
   })
 
 }

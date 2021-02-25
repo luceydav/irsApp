@@ -6,7 +6,7 @@
 #' @import shiny
 #' @import shinydashboard
 #' @import shinyWidgets
-#' @import irs.soi
+#' @import irsSOI
 #'
 #' @noRd
 app_ui <- function(request) {

@@ -24,7 +24,7 @@ mod_spaghetti_server <- function(input, output, session, dataset){
 
   output$spaghetti <- plotly::renderPlotly({
     req(dataset())
-    irs.soi::make_spaghetti_plot(dataset())
+    irsSOI::make_spaghetti_plot(dataset())
   })
 }
 

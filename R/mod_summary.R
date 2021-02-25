@@ -29,7 +29,7 @@ mod_summary_server <- function(input, output, session, dataset, var){
 
     req(dataset())
 
-    irs.soi::make_summary_DT(dataset(), type = var$type())
+    irsSOI::make_summary_DT(dataset(), type = var$type())
 
   })
 }

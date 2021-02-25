@@ -29,7 +29,7 @@ mod_income_server <- function(input, output, session, dataset, var){
 
     req(dataset())
 
-    irs.soi::make_income_DT(dataset(), type = var$type())
+    irsSOI::make_income_DT(dataset(), type = var$type())
 
   })
 }

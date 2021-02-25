@@ -24,7 +24,7 @@ mod_taxRate_server <- function(input, output, session, dataset){
 
   output$taxrate <- plotly::renderPlotly({
     req(dataset())
-    irs.soi::make_tax_graph(dataset())
+    irsSOI::make_tax_graph(dataset())
 
   })
 
