@@ -2,7 +2,8 @@ FROM rocker/r-ver:4.0.3
 RUN apt-get update && apt-get install -y  git-core libcairo2-dev libcurl4-openssl-dev libgit2-dev libicu-dev libssl-dev libxml2-dev make pandoc pandoc-citeproc zlib1g-dev && rm -rf /var/lib/apt/lists/*
 RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'), download.file.method = 'libcurl')" >> /usr/local/lib/R/etc/Rprofile.site
 RUN R -e 'install.packages("remotes")'
-RUN R -e 'remotes::install_github("r-lib/remotes", ref = "97bbf81")'
+RUN R -e 'remotes::install_github("r-lib/remotes", ref = "7b63f78")'
+RUN R -e 'remotes::install_github("luceydav/irsSOI", ref = "f0f089e")'
 RUN Rscript -e 'remotes::install_version("magrittr",upgrade="never", version = "2.0.1")'
 RUN Rscript -e 'remotes::install_version("glue",upgrade="never", version = "1.4.2")'
 RUN Rscript -e 'remotes::install_version("rlang",upgrade="never", version = "0.4.10")'
@@ -19,13 +20,13 @@ RUN Rscript -e 'remotes::install_version("rmarkdown",upgrade="never", version = 
 RUN Rscript -e 'remotes::install_version("fst",upgrade="never", version = "0.9.4")'
 RUN Rscript -e 'remotes::install_version("shinyWidgets",upgrade="never", version = "0.5.7")'
 RUN Rscript -e 'remotes::install_version("shinydashboard",upgrade="never", version = "0.7.1")'
-RUN Rscript -e 'remotes::install_version("irs.soi",upgrade="never", version = "0.0.0.9000")'
 RUN Rscript -e 'remotes::install_version("plotly",upgrade="never", version = "4.9.3")'
 RUN Rscript -e 'remotes::install_version("thinkr",upgrade="never", version = "0.15")'
 RUN Rscript -e 'remotes::install_version("golem",upgrade="never", version = "0.2.1")'
 RUN mkdir /build_zone
 ADD . /build_zone
 WORKDIR /build_zone
+RUN mkdir -p /build_zone/data
 RUN R -e 'remotes::install_local(upgrade="never")'
-EXPOSE 80
-CMD R -e "options('shiny.port'=80,shiny.host='0.0.0.0');irsApp::run_app()"
+EXPOSE 3838
+CMD R -e "options('shiny.port'=3838,shiny.host='0.0.0.0');irsApp::run_app()"
