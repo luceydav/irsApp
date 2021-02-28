@@ -4,6 +4,7 @@ RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'), download.file.m
 RUN R -e 'install.packages("remotes")'
 RUN R -e 'remotes::install_github("r-lib/remotes", ref = "7b63f78")'
 RUN R -e 'remotes::install_github("luceydav/irsSOI", ref = "f0f089e")'
+RUN R -e 'remotes::install_github("luceydav/irsApp", ref = "3e87615")'
 RUN Rscript -e 'remotes::install_version("magrittr",upgrade="never", version = "2.0.1")'
 RUN Rscript -e 'remotes::install_version("glue",upgrade="never", version = "1.4.2")'
 RUN Rscript -e 'remotes::install_version("rlang",upgrade="never", version = "0.4.10")'
