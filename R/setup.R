@@ -1,6 +1,6 @@
-if ( file.exists(paste0(here::here(),"/data/irs_app_big.fst")) ) {
+if ( file.exists(here::here("data/irs_app_big.fst"))) {
     data <-
-      fst::read_fst(paste0(here::here(),"/data/irs_app_big.fst"))
+      fst::read_fst(here::here("data/irs_app_big.fst"))
 } else {
     data <- irsSOI::irs_app_data
 }
