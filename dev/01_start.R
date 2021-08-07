@@ -48,7 +48,7 @@ golem::use_recommended_deps()
 ## Favicon ----
 # If you want to change the favicon (default is golem's one)
 golem::remove_favicon()
-golem::use_favicon("/Users/davidlucey/Desktop/David/Projects/favicon.ico")
+golem::use_favicon("inst/app/www/favicon.ico")
 # path = "path/to/ico". Can be an online file.
 
 ## Add helper functions ----
