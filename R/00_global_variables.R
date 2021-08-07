@@ -1,2 +1,3 @@
 utils::globalVariables(names =
-                         c("type"))
+                         c("type",
+                           "data"))
