@@ -21,7 +21,8 @@ Imports:
     magrittr,
     fst,
     rlang,
-    irsSOI
+    irsSOI (>= 0.0.0.9000),
+    pkgload
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
@@ -33,3 +34,7 @@ Config/testthat/edition: 3
 VignetteBuilder: knitr
 URL: https://github.com/luceydav/irsApp
 BugReports: https://github.com/luceydav/irsApp/issues
+Depends: 
+    R (>= 2.10)
+Remotes:  
+    github::luceydav/irsSOI
