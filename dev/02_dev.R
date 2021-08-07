@@ -18,7 +18,7 @@
 usethis::use_package( "thinkr" )
 usethis::use_package("data.table")
 usethis::use_package("plotly")
-usethis::use_package("irsSOI")
+usethis::use_dev_package("irsSOI", remote = "github::luceydav/irsSOI")
 usethis::use_package("shinydashboard")
 usethis::use_package("shinyWidgets")
 usethis::use_package("fst")
@@ -48,7 +48,7 @@ golem::add_css_file( "custom" )
 
 ## Add internal datasets ----
 ## If you have data in your package
-usethis::use_data_raw( name = "my_dataset", open = FALSE )
+usethis::use_data_raw( name = "data", open = FALSE )
 
 ## Tests ----
 ## Add one line by test you want to create
