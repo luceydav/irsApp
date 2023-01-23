@@ -22,7 +22,7 @@ app_ui <- function(request) {
       shinydashboard::dashboardSidebar(
         shinydashboard::sidebarMenu(
           shinydashboard::menuItem("Tables", tabName = "table", icon = shiny::icon("table")),
-          shinydashboard::menuItem("Charts", tabName = "charts", icon = shiny::icon("bar-chart-o")),
+          shinydashboard::menuItem("Charts", tabName = "charts", icon = shiny::icon("chart-bar")),
           shinydashboard::menuItem("View", mod_varselect_ui("varselect_ui_1"), icon = shiny::icon("gear")),
           shinyWidgets::selectizeGroupUI(
             id = "my-filters",

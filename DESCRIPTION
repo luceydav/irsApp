@@ -8,33 +8,31 @@ Imports:
     config,
     golem,
     shiny,
-    processx,
-    attempt,
     DT,
-    glue,
     htmltools,
-    thinkr,
-    data.table,
     plotly,
     shinydashboard,
     shinyWidgets,
-    magrittr,
-    fst,
     rlang,
-    irsSOI (>= 0.0.0.9000),
-    pkgload
+    irsSOI (>= 0.0.0.9000)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+LazyDataCompression:xz
+RoxygenNote: 7.2.3
 Suggests: 
     testthat (>= 3.0.0),
     knitr,
-    rmarkdown
+    rmarkdown,
+    data.table,
+    glue,
+    attempt,
+    pkgload,
+    processx,
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 URL: https://github.com/luceydav/irsApp
 BugReports: https://github.com/luceydav/irsApp/issues
 Depends: 
     R (>= 2.10)
-Remotes:  
+Remotes: 
     github::luceydav/irsSOI

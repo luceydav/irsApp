@@ -3,7 +3,7 @@
 #' Sample of cleaned up IRS Data product after running load_soi() and clean_soi()
 #' Only includes 2018 for CT
 #'
-#' @format A data frame with 2033904 rows and 36 variables:
+#' @format A data frame with 2033904 rows and 53 variables:
 #' \describe{
 #'   \item{zipcode}{zipcode, chr}
 #'   \item{zipcode_type}{Type of Zipcode, chr}
@@ -52,7 +52,6 @@
 #'   \item{n26270}{Returns Partnership/S-corp, num}
 #'   \item{a01700}{Taxable pensions and annuities, num}
 #'   \item{n01700}{Returns with Taxable pensions and annuities, num}
-#'   \item{n02500.1}{Returns with taxable Social Security benefits, num}
 #'   \item{a09600}{Alternative minimum tax amount, num}
 #'   \item{n09600}{Returns with Alternative minimum tax amount, num}
 #'   \item{a11000}{Earned Income Credit amount, num}
