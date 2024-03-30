@@ -11,3 +11,4 @@ $run_dev.*
 ^\.httr-oauth$
 ^app\.R$
 ^rsconnect$
+project_notes

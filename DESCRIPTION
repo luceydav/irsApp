@@ -14,20 +14,20 @@ Imports:
     shinydashboard,
     shinyWidgets,
     rlang,
-    irsSOI (>= 0.0.0.9000)
+    irsSOI (>= 0.0.0.9000),
+    data.table
 Encoding: UTF-8
 LazyData: true
-LazyDataCompression:xz
-RoxygenNote: 7.2.3
+LazyDataCompression: xz
+RoxygenNote: 7.3.1
 Suggests: 
     testthat (>= 3.0.0),
     knitr,
     rmarkdown,
-    data.table,
     glue,
     attempt,
     pkgload,
-    processx,
+    processx
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 URL: https://github.com/luceydav/irsApp

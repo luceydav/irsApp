@@ -39,7 +39,7 @@ app_ui <- function(request) {
                 placeholder = 'select'
               ),
               var_three = list(
-                inputId = "post_office_city",
+                inputId = "major_city",
                 title = "Specify Cities",
                 placeholder = 'select'
               ),

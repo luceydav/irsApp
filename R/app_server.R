@@ -17,7 +17,7 @@ app_server <- function( input, output, session ) {
     id = "my-filters",
     data = data,
     inline = FALSE,
-    vars = c("state", "county", "post_office_city", "zipcode", "agi_level")
+    vars = c("state", "county", "major_city", "zipcode", "agi_level")
   )
 
   # Type
